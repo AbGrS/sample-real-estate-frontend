@@ -4,7 +4,7 @@ import PropertyListings from './components/propertiesListings'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <PropertyListings/>
     </div>
   );

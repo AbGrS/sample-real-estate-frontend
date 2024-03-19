@@ -1,0 +1,31 @@
+.li-card{
+    border: 2px solid #ccc;
+    cursor: pointer;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column
+}
+
+.li-card .price {
+    margin-left: auto;
+    align-self: center
+}
+
+.li-card .location{
+    margin-bottom: 20px
+}
+
+.li-card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover
+}
+
+.li-card .card-main-section{
+    padding: 10px
+}
+
+.card-main-section .sub-section{
+    display: flex;
+}
