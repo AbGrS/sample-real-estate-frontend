@@ -24,7 +24,7 @@ function PropertyListings() {
   const onFavClick = async (_id, flag)=>{
     try{
       debugger;
-       const response = await fetch('http://localhost:4000/api/properties/updateFav', {
+       const response = await fetch('https://sample-real-estate-backend.onrender.com/api/properties/updateFav', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
