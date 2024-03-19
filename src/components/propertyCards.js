@@ -1,13 +1,18 @@
 import React from 'react';
 import './propertyCard.css';
+import { CiHeart } from "react-icons/ci";
+import { BsFillHeartFill } from "react-icons/bs";
 
-function PropertyCards({title, description, price, location, imageURL}) {
+function PropertyCards({_id, title, description, price, location, isFavourite, imageURL, onFavClick}) {
 
   return (
     <>
     <li className='li-card'>
-        <div>
+        <div style={{position: 'relative'}}>
         <img src={imageURL} />
+          <div style={{position: 'absolute', top: '5px', right: '5px', color:'#fff', fontSize: 'xx-large'}}>
+            {!isFavourite ? <CiHeart color='#fff' onClick={()=>onFavClick(_id, true)}/> : <BsFillHeartFill color='#fc5871' onClick={()=>onFavClick(_id, false)}/>}
+          </div>
         </div>
         <div className='card-main-section'>
         
