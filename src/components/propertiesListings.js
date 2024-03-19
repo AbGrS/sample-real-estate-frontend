@@ -23,8 +23,7 @@ function PropertyListings() {
 
   const onFavClick = async (_id, flag)=>{
     try{
-      debugger;
-       const response = await fetch('https://sample-real-estate-backend.onrender.com/api/properties/updateFav', {
+       const response = await fetch('http://localhost:4000/api/properties/updateFav', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -33,7 +32,17 @@ function PropertyListings() {
         body: JSON.stringify({_id, flag})
       });
 
-      fetchData();
+      response.json().then(k=>{
+        const copyData = [...data];
+
+        for(let item of copyData){
+          if(item._id === _id){
+            item.isFavourite = !item.isFavourite;
+          }
+        }
+        setData(copyData)
+      })
+      
     }catch(error){
       console.log('Error occurred', error);
     }
