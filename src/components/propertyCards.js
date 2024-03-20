@@ -13,7 +13,6 @@ function PropertyCards({_id, title, description, price, location, isFavourite, i
     deleteClick} = crudOperators;
 
   const handleItemClick = (item)=>{
-    debugger;
     const {innerText} = item.target;
     const option = innerText.toLowerCase();
     if(option=== 'edit'){
