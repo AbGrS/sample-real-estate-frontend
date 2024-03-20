@@ -38,12 +38,13 @@ https://abgrs.github.io/sample-real-estate-frontend/
 - Map to filter and show properties
 - filter properties
 
-  ## Non functional Additions:
+#### Non functional Additions:
 - Localization
 - unit testing, sub system and integration testing
 - Automation (Mable)
 - Performance testing (Both FE and FE)
 - Check Web Vitals and improve them
+- Introduce Rdx-toolkit for managing states as the application is going to get large
 
-  ## Future Plans:
+#### Future Plans:
 - Scale the application for million users, Introduce Sharding
