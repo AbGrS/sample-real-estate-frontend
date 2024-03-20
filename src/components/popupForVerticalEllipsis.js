@@ -16,6 +16,9 @@ function PopupForVerticalEllipsis({_id, handleItemClick}) {
             showVisibility ? (<div style={{position: 'absolute', background: '#fff', right: 0, bottom: 0}}>
             <div className='mainSection' onClick={handleItemClick}>
                 <div className='menu'>
+                    Add
+                </div>
+                <div className='menu'>
                     Edit
                 </div>
                 <div className='menu'>

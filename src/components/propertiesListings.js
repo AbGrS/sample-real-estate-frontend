@@ -77,6 +77,39 @@ function PropertyListings() {
    }
   }
 
+  const addClick = async ()=>{
+    try{
+      const response = await fetch('https://sample-real-estate-backend.onrender.com/api/properties/postProperty', {
+       method: 'POST',
+       headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json'
+       },
+       body: JSON.stringify({
+            title: 'one more property', 
+            description: "some great desccription" || '', 
+            price: 1000000, 
+            location: 'Noida' || '',  
+            imageURL: 'https://img.freepik.com/premium-photo/house-loupe-magnifying-glass-real-estate-searching-concept-house-search-house-hunting-3d_505080-447.jpg?size=626&ext=jpg&ga=GA1.1.1011931459.1710832452&semt=ais' || ''
+       })
+     });
+
+     response.json().then(k=>{
+       const copyData = [...data, k];
+       setData(copyData)
+     })
+     
+   }catch(error){
+     console.log('Error occurred', error);
+   }
+  }
+
+  const crudOperators = {
+    onFavClick,
+    addClick,
+    deleteClick,
+
+  }
   const setAllFavourites = ()=>{
     const copyData = data.filter(d=>d.isFavourite);
     setData(copyData);
@@ -95,7 +128,7 @@ function PropertyListings() {
       <ul className='main-container'>
        
         {data.map((item, index) => (
-          <PropertyCards key={index} onFavClick={onFavClick} deleteClick={deleteClick} {...item}/>
+          <PropertyCards key={index} crudOperators={crudOperators} {...item}/>
         ))}
       </ul>
     </div>

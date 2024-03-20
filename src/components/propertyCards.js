@@ -6,8 +6,12 @@ import { BsFillHeartFill } from "react-icons/bs";
 import PopupForVerticalEllipsis from "./popupForVerticalEllipsis";
 
 
-function PropertyCards({_id, title, description, price, location, isFavourite, imageURL, onFavClick, deleteClick}) {
+function PropertyCards({_id, title, description, price, location, isFavourite, imageURL, crudOperators}) {
  
+  const {onFavClick,
+    addClick,
+    deleteClick} = crudOperators;
+
   const handleItemClick = (item)=>{
     debugger;
     const {innerText} = item.target;
@@ -16,6 +20,8 @@ function PropertyCards({_id, title, description, price, location, isFavourite, i
       alert('Api in Progress...')
     }else if(option === 'delete'){
       deleteClick(_id); 
+    }else if(option === 'add'){
+      addClick();
     }
   }
   return (
