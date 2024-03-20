@@ -5,7 +5,6 @@ function useHandleVerticalEllipsisVisibility(visibility){
     const [showVisibility, setShowVisibility] = useState(false);
 
     const handleClickOutside = (e)=>{
-        debugger;
         if(elementRef.current && !elementRef.current.contains(e.target)){
             setShowVisibility(false);
         }else{

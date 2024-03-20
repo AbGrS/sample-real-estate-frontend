@@ -50,6 +50,33 @@ function PropertyListings() {
     }
   }
 
+  const deleteClick = async (_id)=>{
+    try{
+      const response = await fetch('https://sample-real-estate-backend.onrender.com/api/properties/deleteProperty', {
+       method: 'DELETE',
+       headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json'
+       },
+       body: JSON.stringify({_id})
+     });
+
+     response.json().then(k=>{
+       const copyData = [...data];
+
+       copyData.forEach((item, index)=>{
+        if(item._id === _id){
+          copyData.splice(index, 1)
+        }
+       })
+       setData(copyData)
+     })
+     
+   }catch(error){
+     console.log('Error occurred', error);
+   }
+  }
+
   const setAllFavourites = ()=>{
     const copyData = data.filter(d=>d.isFavourite);
     setData(copyData);
@@ -68,7 +95,7 @@ function PropertyListings() {
       <ul className='main-container'>
        
         {data.map((item, index) => (
-          <PropertyCards key={index} onFavClick={onFavClick} {...item}/>
+          <PropertyCards key={index} onFavClick={onFavClick} deleteClick={deleteClick} {...item}/>
         ))}
       </ul>
     </div>
