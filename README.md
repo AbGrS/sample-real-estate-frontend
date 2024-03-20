@@ -38,13 +38,15 @@ https://abgrs.github.io/sample-real-estate-frontend/
 - Map to filter and show properties
 - filter properties
 
-#### Non functional Additions:
+#### Non functional Scope:
 - Localization
+- Configure Husly, pre-commit hooks, prettier and ESlint
 - unit testing, sub system and integration testing
 - Automation (Mable)
 - Performance testing (Both FE and FE)
 - Check Web Vitals and improve them
 - Introduce Rdx-toolkit for managing states as the application is going to get large
+- Add Swagger for APIs
 
 #### Future Plans:
 - Scale the application for million users, Introduce Sharding
