@@ -28,3 +28,13 @@ Your app is ready to be deployed!
 `npm run deploy` will create a build (by running `preDeploy`) and deploy on github pages. The application can be viewed at:
 https://abgrs.github.io/sample-real-estate-frontend/
 
+### Coming next...
+- Nav Bar (FE)
+- Authentication and Authorization - both FE and BE (for Apis) Intoduce OTP as well
+- Pagination (Both FE and BE)
+- Edit and Delete a property (both FE and BE, introduce vertical elpisis that opens a little poup with the options to edit and delete)
+- Lazy loading
+- Share a property
+- Map to filter and show properties
+- filter properties
+
