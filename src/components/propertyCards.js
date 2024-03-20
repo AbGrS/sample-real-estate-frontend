@@ -3,8 +3,11 @@ import './propertyCard.css';
 import { CiHeart } from "react-icons/ci";
 import { BsFillHeartFill } from "react-icons/bs";
 
-function PropertyCards({_id, title, description, price, location, isFavourite, imageURL, onFavClick}) {
+import PopupForVerticalEllipsis from "./popupForVerticalEllipsis";
 
+
+function PropertyCards({_id, title, description, price, location, isFavourite, imageURL, onFavClick}) {
+ 
   return (
     <>
     <li className='li-card'>
@@ -24,7 +27,15 @@ function PropertyCards({_id, title, description, price, location, isFavourite, i
             <div className='location'>
                 {location}
             </div>
-            {description}
+
+            <div style={{display: 'flex'}}>
+              {description}
+             
+               <PopupForVerticalEllipsis _id={_id}/>
+              
+            </div>
+           
+            
         </div>
         
     </li>
