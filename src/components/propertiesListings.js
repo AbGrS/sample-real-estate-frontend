@@ -3,6 +3,7 @@ import PropertyCards from './propertyCards';
 
 function PropertyListings() {
   const [data, setData] = useState([]);
+  const [originalData, setOriginalData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -14,6 +15,7 @@ function PropertyListings() {
       const response = await fetch('https://sample-real-estate-backend.onrender.com/api/properties');
       const jsonData = await response.json();
       setData(jsonData);
+      setOriginalData(jsonData);
       setLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -48,12 +50,23 @@ function PropertyListings() {
     }
   }
 
+  const setAllFavourites = ()=>{
+    const copyData = data.filter(d=>d.isFavourite);
+    setData(copyData);
+  }
 
+  if(loading) return <div className='heading'>Loading...</div>
   return (
     <div>
       <h2 className='heading'>Explore the Properties</h2>
-      {loading && <div className='heading'>Loading...</div>}
+
+      <div className='buttonContainer'>
+        <button onClick={()=>setData(originalData)}>All</button> <button onClick={setAllFavourites}>Favourites</button>
+      </div>
+     
+      
       <ul className='main-container'>
+       
         {data.map((item, index) => (
           <PropertyCards key={index} onFavClick={onFavClick} {...item}/>
         ))}

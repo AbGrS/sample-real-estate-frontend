@@ -39,6 +39,8 @@
 
 ul {
   list-style-type: none;
+  all: unset;
+  justify-content: center;
 }
 
 .main-container{
@@ -48,4 +50,26 @@ ul {
 
 .heading{
   text-align: center;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.buttonContainer button{
+  all: unset;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  margin: 0 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttonContainer button:first-child{
+  background: #15bd;
+}
+
+.buttonContainer button:nth-child(2){
+  background: #fc5871;
 }
