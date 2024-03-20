@@ -32,7 +32,8 @@ https://abgrs.github.io/sample-real-estate-frontend/
 - Nav Bar (FE)
 - Authentication and Authorization - both FE and BE (for Apis) Intoduce OTP authentication as well
 - Pagination (Both FE and BE)
-- Edit and Delete a property (both FE and BE, introduce vertical elpisis that opens a little poup with the options to edit and delete)
+- Edit and Delete a property (both FE and BE, introduce vertical elpisis that opens a little poup with the options to edit and delete) Done (Edit Api to be done, FE done)
+- Router on FE
 - Lazy loading
 - Share a property
 - Map to filter and show properties
