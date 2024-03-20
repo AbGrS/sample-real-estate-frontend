@@ -46,6 +46,7 @@ https://abgrs.github.io/sample-real-estate-frontend/
 - Performance testing (Both FE and FE)
 - Check Web Vitals and improve them
 - Introduce Rdx-toolkit for managing states as the application is going to get large
+- Add Swagger for APIs
 
 #### Future Plans:
 - Scale the application for million users, Introduce Sharding
