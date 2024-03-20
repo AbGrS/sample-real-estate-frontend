@@ -30,7 +30,7 @@ https://abgrs.github.io/sample-real-estate-frontend/
 
 ### Coming next...
 - Nav Bar (FE)
-- Authentication and Authorization - both FE and BE (for Apis) Intoduce OTP as well
+- Authentication and Authorization - both FE and BE (for Apis) Intoduce OTP authentication as well
 - Pagination (Both FE and BE)
 - Edit and Delete a property (both FE and BE, introduce vertical elpisis that opens a little poup with the options to edit and delete)
 - Lazy loading
@@ -38,3 +38,12 @@ https://abgrs.github.io/sample-real-estate-frontend/
 - Map to filter and show properties
 - filter properties
 
+  ## Non functional Additions:
+- Localization
+- unit testing, sub system and integration testing
+- Automation (Mable)
+- Performance testing (Both FE and FE)
+- Check Web Vitals and improve them
+
+  ## Future Plans:
+- Scale the application for million users, Introduce Sharding
