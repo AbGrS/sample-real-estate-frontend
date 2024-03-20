@@ -47,6 +47,7 @@ https://abgrs.github.io/sample-real-estate-frontend/
 - Check Web Vitals and improve them
 - Introduce Rdx-toolkit for managing states as the application is going to get large
 - Add Swagger for APIs
+- Implement logger
 
 #### Future Plans:
 - Scale the application for million users, Introduce Sharding
